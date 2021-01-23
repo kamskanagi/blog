@@ -3,14 +3,17 @@
       <a class="navbar-brand" href="/">{{config('app.name')}}</a>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+              <a class="nav-link  {{Request::is('/') ? 'active' : ''}}" href="/">Home </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about">About</a>
+                <a class="nav-link  {{Request::is('about') ? 'active' : ''}}" href="/about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact">Contact</a>
+                <a class="nav-link  {{Request::is('contact') ? 'active' : ''}}" href="/contact">Contact</a>
+              </li>
+               <li class="nav-item ">
+                <a class="nav-link {{Request::is('messages') ? 'active' : ''}}" href="/messages">Contact see</a>
               </li>
             </ul>
           </div>
